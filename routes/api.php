@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::post('/upload/alibabaOrder', [AlibabaOrdersController::class, 'import']);
 Route::get('/alibabaOrders', [AlibabaOrdersController::class, 'index']);
+Route::get('/alibabaOrder', [AlibabaOrdersController::class, 'getOrderByPhone']);
