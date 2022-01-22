@@ -59,7 +59,7 @@ class AlibabaOrdersController extends Controller
 
         AlibabaOrder::truncate();
 
-        Excel::import(new AlibabaOrdersImport, './uploads/' . date('Ymd') . "/" . $filename);
+        Excel::import(new AlibabaOrdersImport, './uploads/' . $filename);
 
         return "successd";
     }
